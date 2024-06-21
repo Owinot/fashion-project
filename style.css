@@ -1,0 +1,254 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    overflow-x: hidden;
+}
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+} 
+header {
+    background-color: #58079b;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position:relative;
+    z-index: 1;
+    display:flex;
+    
+}
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #444444;
+    padding: 0.5rem;
+    position: relative;
+    z-index: 1;
+}
+nav a {
+    color: #fff;
+    margin: 0 1rem;
+    text-decoration: none;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+nav a::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+z-index: -1;
+pointer-events: none;
+opacity: 0;
+transition: opacity 0.5s ease-in-out;
+}
+nav a:hover::before {
+opacity: 1;
+}
+nav a:hover {
+color: #ff0;
+text-shadow: 0 0 10px rgba(255, 255, 0, 0.8), 0 0 20px rgba(255, 255, 0, 0.6), 0 0 30px rgba(255, 255, 0, 0.4);
+}
+header img.logo {
+height: 50px;
+}
+.container {
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+.product {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1rem;
+    text-align: center;
+    background-color: rgba(194, 13, 201, 0.9);
+    width: 200px;
+    position: relative;
+    z-index: 1;
+}
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+.product h3 {
+    margin: 1rem 0 0.5rem;
+}
+.product p {
+    margin: 0.5rem 0;
+}
+.product button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.cart {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: #4d0bc9;
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    z-index: 2;
+}
+.cart h3 {
+    margin: 0 0 1rem;
+}
+.cart ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.cart li {
+    margin: 0.5rem 0;
+}
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 5; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    max-width: 500px;
+    border-radius: 10px;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: rgb(216, 103, 10);
+    text-decoration: none;
+    cursor: pointer;
+}
+.order-form input,
+.order-form select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.order-form button {
+    background-color: #28a745;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+}
+.order-form button:hover {
+    background-color: #45a049;
+}
+
+
+.landing-page {
+display: flex;
+flex-direction: column;
+justify-content:space-around;
+align-items:center;
+height: 100vh;
+background: url('images/freepik-fashion-youtube-thumbnail-20240616102624pRF8.png') no-repeat center center;
+background-size: cover;
+color: #fff;
+text-align:center;
+padding: 20px;
+}
+
+.enter-button {
+margin-bottom: 20px;
+padding: 10px 20px;
+font-size: 1em;
+color: #ff6699;
+background-color: #fff;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.enter-button:hover {
+background-color: #ffcc33;
+}
+
+footer {
+background: #2608cf;
+color: #fff;
+padding: 20px;
+text-align: center;
+position: relative;
+bottom: 0;
+width: 100%;
+}
+
+footer .contact-us a {
+color: #fff;
+margin: 0 10px;
+text-decoration: none;
+}
+
+footer .contact-us a:hover {
+text-decoration: underline;
+}
+
+footer .copyright {
+margin-top: 10px;
+}
+.shop-button, .order-button {
+    padding: 5px 15px;
+    font-size: 0.9em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin: 5px;
+    text-decoration: none;
+}
+
+.shop-button:hover, .order-button:hover {
+    background-color: #0056b3;
+}

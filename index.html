@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Fashion Store</title>
+    <script src="https://kit.fontawesome.com/3ae0e8405e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+       <video class="video-background" autoplay loop muted>
+<source src="images/Abstract_Of_Blue_Paint_Water_preview.mp4" type="video/mp4">
+    
+    </video>
+  
+    <header>
+     <img src="images/Gold Luxury Initial Circle Logo(6).png" alt="Stephen Fashion Store Logo" class="logo">
+        <h1>Stellys Fashion Store</h1>
+        
+    </header>
+    <div class="landing-page" id="landingPage">
+        
+        <button class="enter-button" onclick="enterStore()">Enter Store</button>
+    </div>
+    <div class="store-content" id="storeContent" style="display: none;">
+    <nav>
+       
+        <a data-category="Hoodies">Hoodies</a>
+        <a data-category="Shoes">Shoes</a>
+        <a data-category="Watches">Watches</a>
+        <a data-category="Sweatshirts">Sweatshirts</a>
+        <a data-category="Caps">Caps</a>
+        <a data-category="Sweatpants">Glasses</a>
+        <a data-category="Jewelry">Jewelry</a>
+    </nav>
+   
+    <div class="container" id="product-list">
+        <!-- Products will be injected here by JavaScript -->
+    </div>
+    <div class="cart" id="cart">
+         <h2>SHOP</h2>
+        <ul id="cart-items">
+            
+            <!-- Cart items will be injected here by JavaScript -->
+        </ul>
+
+
+        <button onclick="openOrderForm()">Order Now</button>
+    </div>
+    <footer>
+        <div class="contact-us">
+            <a href="https://web.facebook.com/?_rdc=1&_rdr" target="_blank"><i class="fa-brands fa-facebook fa-xl"></i></a>
+            <a href="https://www.tiktok.com" target="_blank"><i class="fa-brands fa-tiktok fa-xl"></i></a>
+            <a href="https://x.com" target="_blank"><i class="fa-brands fa-x-twitter fa-xl"></i></a>
+            <a href="https://www.instagram.com/sowino939/" target="_blank"><i class="fa-brands fa-instagram fa-xl"></i></a>
+            <a href="https://call.whatsapp.com/voice/rex4NLNTuucQgHGASL9Gtp" target="_blank"><i class="fa-brands fa-whatsapp fa-xl"></i></a>
+        </div>
+        <div class="copyright">
+            &copy; 2024 Stellys Fashion Store.<br> All rights reserved.
+        </div>
+    </footer>
+     <!-- The Modal -->
+     <div id="orderModal" class="modal">
+<div class="modal-content">
+            <span class="close-button" onclick="closeOrderForm()">&times;</span>
+            <form class="order-form" id="order-form">
+                <h2>Order Form</h2>
+                <label for="address" >Address</label>
+                <input type="text" id="address" name="address" placeholder="Enter your address" required>
+                <label for="phone">Phone Number</label>
+                <input type="number" id="phone" name="phone" placeholder="Enter your phone number" required>
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" name="quantity" min="1" placeholder="Enter quantity" required>
+                <label for="payment">Payment Method</label>
+                <select id="payment" name="payment" required>
+                    <option value="Credit Card">Credit Card</option>
+                    <option value="PayPal">PayPal</option>
+                    <option value="Bank Transfer">Bank Transfer</option>
+                    <option value="M-pesa">M-pesa</option>
+                </select>
+
+                <label for="total">Total Price</label>
+                <input type="text" id="total" name="total">
+                <button type="button" onclick="submitOrder()">Submit Order</button>
+            </form>
+        </div>
+       
+    <script src="project.js"></script>
+</body>
+</html>
